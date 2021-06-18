@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FrontEnd</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Custom Theme files -->
+  <!--theme-style-->
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!--//theme-style-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script
+    type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!-- start menu -->
+  <link href="assets/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="assets/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="assets/js/jquery.magnific-popup.js" type="text/javascript"></script>
+  <!-- Template CSS -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+  <app-root></app-root>
+
+  <script type="text/javascript" src="assets/js/memenu.js"></script>
+  <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+  <script src="assets/js/simpleCart.min.js"> </script>
+  <!-- slide -->
+  <script src="assets/js/responsiveslides.min.js"></script>
+  <script>
+    $(function () {
+      $("#slider").responsiveSlides({
+        auto: true,
+        speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+  <script type="text/javascript" src="assets/js/modernizr.custom.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+      });
+
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      var menu_ul = $('.menu-drop > li > ul'),
+        menu_a = $('.menu-drop > li > a');
+      menu_ul.hide();
+      menu_a.click(function (e) {
+        e.preventDefault();
+        if (!$(this).hasClass('active')) {
+          menu_a.removeClass('active');
+          menu_ul.filter(':visible').slideUp('normal');
+          $(this).addClass('active').next().stop(true, true).slideDown('normal');
+        } else {
+          $(this).removeClass('active');
+          $(this).next().stop(true, true).slideUp('normal');
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

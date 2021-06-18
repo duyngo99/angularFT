@@ -1,0 +1,35 @@
+<app-car-header></app-car-header>
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col">
+            
+        </div>
+        <div class="col text-right">
+            <a href="#" routerLink="/cars" class="btn btn-secondary btn-sm">Manage cars</a>
+            <a href="#" routerLink="/branches" class="btn btn-info btn-sm">Manage branches</a>
+        </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-sm">
+        <tr>
+            <th>ContactId</th>
+            <th>Name</th>
+            <th>PhoneNumber</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th width="200px"></th>
+        </tr>
+        <tr *ngFor="let contact of contacts">
+            <td>{{ contact.contactId }}</td>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.phoneNumber }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.description }}</td>
+            <td class="text-right">
+                <a href="#" [routerLink]="['/contacts/', contact.contactId]" class="btn btn-info btn-sm">View</a>
+                <button type="button" (click)="deleteContact(contact.contactId)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

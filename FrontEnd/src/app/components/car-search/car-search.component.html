@@ -1,0 +1,18 @@
+<app-car-header></app-car-header>
+<div class="content-top1">
+    <div class="col-md-4 col-md3" *ngFor="let car1 of cars">
+        <div class="col-md1 simpleCart_shelfItem">
+            <a href="#">
+                <img width="190px" height="100px" src="../../../assets/images/{{ car1.carImage }}" alt="" />
+            </a>
+            <h3><a href="single.html">{{car1.carName}}</a></h3>
+            <div class="price">
+                <h5 class="item_price">{{car1.price}}</h5>
+                <a href="#" class="item_add">Add To Cart</a>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+<app-car-footer></app-car-footer>

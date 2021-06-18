@@ -1,0 +1,90 @@
+<div class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="col-sm-4 world">
+                <ul>
+                    <li>
+                        <select class="in-drop">
+                            <option>English</option>
+                            <option>Japanese</option>
+                            <option>French</option>
+                        </select>
+                    </li>
+                    <li><select class="in-drop1">
+                            <option>Dollar</option>
+                            <option>Euro</option>
+                            <option>Yen</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4 logo">
+                <a href="#" routerLink="/home"><img src="assets/images/logo.png" width="100px" height="100px"
+                        alt=""></a>
+            </div>
+
+            <div class="col-sm-4 header-left">
+                <p class="log"><a href="#" routerLink="/login">Login</a>
+                    <span>or</span><a href="#" routerLink="/register">Signup</a>
+                </p>
+                <div class="cart box_1">
+                    <a href="#" routerLink ="/cart">
+                        <h3>
+                            <div class="total">
+
+                            </div>
+                            <img src="../../../assets/images/cart.png" alt="" />
+                        </h3>
+                    </a>
+                    <p><a>Empty Cart</a></p>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="head-top">
+            <div class="col-sm-2 number">
+                <span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
+            </div>
+            <div class="col-sm-8 h_menu4">
+                <ul class="memenu skyblue">
+                    <li class=" grid"><a href="#" routerLink="/home">Home</a></li>
+                    <li><a href="#">Branch</a>
+                        <div class="mepanel">
+                            <div class="row">
+                                <div class="col1">
+                                    <div class="h_nav">
+                                        <h4>All Branches</h4>
+                                        <ul *ngFor="let branch of branches">
+                                            <li><a
+                                                    [routerLink]="['/carsBranch/', branch.branchId]">{{branch.branchName}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li><a routerLink="/cars">Admin</a></li>
+                    <li><a class="color6" href="#" routerLink="/contacts">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-2 ">
+                <!-- <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)">
+                    <input formControlName="name" id="name"  type="text" placeholder="Type some text">
+                    <button class="btn btn-primary" type="submit" [disabled]="!searchForm.valid">Search</button>
+                </form>
+                     -->
+            </div>
+
+            <div class="clearfix"> </div>
+            <!---->
+        </div>
+    </div>
+</div>

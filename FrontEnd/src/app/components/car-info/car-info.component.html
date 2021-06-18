@@ -1,0 +1,49 @@
+<app-car-header></app-car-header>
+
+
+<div class="single">
+
+    <div class="container">
+        <div class="col-md-9">
+            <div class="col-md-5 grid">
+                <div class="flexslider">
+                    <ul class="slides">
+                        
+                            <div class="thumb-image"> <img src="../../../assets/images/{{ car.carImage }}" data-imagezoom="true"
+                                    class="img-responsive"> </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7 single-top-in">
+                <div class="single-para simpleCart_shelfItem" >
+                    <h1>{{ car.carName }}</h1>
+                    <p>{{ car.description }}</p>
+                    <div class="star-on">
+                        <ul>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                        </ul>
+                        <div class="review">
+                            <a href="#"> 3 reviews </a>/
+                            <a href="#"> Write a review</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <label class="add-to item_price">$ {{ car.price }}</label>
+                    <a href="#" routerLink="/cart" class="cart item_add" (click)= addToCart(car)>Add to cart</a>
+                </div>
+            </div>
+
+            <div class="clearfix"> </div>
+            
+        </div>
+        <!----->
+        <div class="clearfix"> </div>
+        <app-car-relation></app-car-relation>
+    </div>
+</div>
+<app-car-footer></app-car-footer>

@@ -1,0 +1,42 @@
+<app-car-header></app-car-header>
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col">
+            
+        </div>
+        <div class="col text-right">
+            <a href="#" routerLink="/create" class="btn btn-warning btn-sm">Create New Car</a>
+            <a href="#" routerLink="/branches" class="btn btn-secondary btn-sm">Manage branches</a>
+            <a href="#" routerLink="/contactsAdmin" class="btn btn-info btn-sm">Manage contacts</a>
+            
+        </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-sm">
+        <tr>
+            <th>CarId</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>BranchId</th>
+            <th>Price</th>
+            <th>CarImage</th>
+            <th>DateRelease</th>
+            <th width="200px"></th>
+        </tr>
+        <tr *ngFor="let car of cars">
+            <td>{{ car.carId }}</td>
+            <td>{{ car.carName }}</td>
+            <td>{{ car.description }}</td>
+            <td>{{ car.branchId }}</td>
+            <td>{{ car.price }}</td>
+            <td><img src= "../../../assets/images/{{ car.carImage }}"  height="200px" width="400"/> </td>
+            <td>{{ car.dateRelease }}</td>
+            <td class="text-right">
+                <a href="#" [routerLink]="['/cars/', car.carId]" class="btn btn-info btn-sm">View</a>
+                <a href="#" [routerLink]="['/edit/', car.carId]" class="btn btn-primary btn-sm">Edit</a>
+                <button type="button" (click)="deleteCar(car.carId)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

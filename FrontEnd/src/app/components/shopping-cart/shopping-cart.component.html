@@ -1,0 +1,35 @@
+<app-car-header></app-car-header>
+<div class="container">
+    <div class="check-out" *ngFor="let car of cars ; let i = index">
+        <h1>Checkout</h1>
+        <table>
+            <tr>
+                <th><i class="fa-fa-trash" (click)="onDelete(i)"></i></th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Prices</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="ring-in"><a href="#" [routerLink]="['/carInfo', car.carId]" class="at-in"><img src="../../../assets/images/{{car.carImage}}"
+                            class="img-responsive" alt=""></a>
+                    <div class="sed">
+                        <h5>{{car.carName}}</h5>
+                        <p>{{car.description}}</p>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </td>
+                <td class="check"><input type="number" [value]="car.quantity" disabled></td>
+                <td>${{car.price}}</td>
+
+                <td>${{car.price *car.quantity}}</td>
+            </tr>
+        </table>
+        <a href="#" class=" to-buy">PROCEED TO BUY</a>
+        <a href="#" routerLink ="/home" class=" to-buy">BACK TO HOMEPAGE</a>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<app-car-footer></app-car-footer>

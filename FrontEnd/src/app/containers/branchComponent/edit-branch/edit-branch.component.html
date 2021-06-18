@@ -1,0 +1,23 @@
+<app-car-header></app-car-header>
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col">
+            <h3>Update Branch</h3>
+        </div>
+        <div class="col text-right">
+            <a href="#" routerLink="/cars" class="btn btn-secondary btn-sm">Back To Cars List</a>
+        </div>
+    </div>
+    <br />
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm)">
+
+        <input formControlName="id" id="id" type="hidden" />
+
+        <div class="form-group">
+            <label for="branchName">Name</label>
+            <input formControlName="branchName" id="branchName" type="text" class="form-control" />
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!editForm.valid">Update</button>
+    </form>
+</div>

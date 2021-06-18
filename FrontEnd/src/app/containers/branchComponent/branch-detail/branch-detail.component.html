@@ -1,0 +1,22 @@
+<app-car-header></app-car-header>
+<div class="container">
+    <br />
+    <h3>Branch Details</h3>
+    <br />
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <h4>{{ branch.branchName }}</h4>
+          </div>
+          <div class="col text-right">
+            <a href="#" routerLink="/cars/" class="btn btn-secondary btn-sm">Back To Branches List</a>
+          </div>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>BranchId:</b> {{ branch.branchId }}</li>
+        <li class="list-group-item"><b>Branch Name:</b> {{ branch.branchName }}</li>
+      </ul>
+    </div>
+  </div>

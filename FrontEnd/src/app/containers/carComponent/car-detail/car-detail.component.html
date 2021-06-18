@@ -1,0 +1,26 @@
+<app-car-header></app-car-header>
+<div class="container">
+    <br />
+    <h3>Car Details</h3>
+    <br />
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <h4>{{ car.carName }}</h4>
+          </div>
+          <div class="col text-right">
+            <a href="#" routerLink="/cars/" class="btn btn-secondary btn-sm">Back To Cars List</a>
+          </div>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>CarId:</b> {{ car.carId }}</li>
+        <li class="list-group-item"><b>Car Name:</b> {{ car.carName }}</li>
+        <li class="list-group-item"><b>Description:</b> {{ car.description }}</li>
+        <li class="list-group-item"><b>Date Release:</b> {{ car.dateRelease }}</li>
+        <li class="list-group-item"><b>Car Image</b> <img src= "../../../assets/images/{{ car.carImage }}"  height="auto" width="500px"/></li>
+        <li class="list-group-item"><b>BranchId</b> {{ car.branchId }}</li>
+      </ul>
+    </div>
+  </div>

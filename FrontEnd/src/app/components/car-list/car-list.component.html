@@ -1,0 +1,23 @@
+<div class="content">
+    <div class="container">
+        <div class="content-top">
+            <h1>New Cars</h1>
+            <div class="content-top1" >
+                <div class="col-md-3 col-md2" *ngFor="let car of cars">
+                    <div class="col-md1 simpleCart_shelfItem" >
+                        <a href="#" [routerLink]="['/carInfo', car.carId]">
+                            <img width="190px" height="100px" src="../../../assets/images/{{ car.carImage }}"  alt="" />
+                        </a>
+                        <h3><a href="#" [routerLink]="['/carInfo', car.carId]"> {{ car.carName }}</a></h3>
+                        <div class="price">
+                            <h5 class="item_price"> ${{ car.price }}</h5>
+                            <a href="#" class="item_add" (click)=addToCart(car)>Add To Cart</a>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
